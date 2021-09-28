@@ -15,4 +15,4 @@ TOKEN = Config.TOKEN
 BOT_ID = Config.BOT_ID
 OWNER_ID = Config.OWNER_ID
 
-cb = Client("Chatbot", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
+kaykay = Client("Chatbot", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
