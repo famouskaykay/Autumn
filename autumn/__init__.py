@@ -1,5 +1,5 @@
 from pyrogram import Client, errors
-from autumn.config import Config
+from autumn.config import API_ID, API_HASH, TOKEN, BOT_ID, OWNER_ID
 import logging
 
 logging.basicConfig(
@@ -7,12 +7,5 @@ logging.basicConfig(
 )
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-
-
-APP_ID = Config.APP_ID
-API_HASH = Config.API_HASH
-TOKEN = Config.TOKEN
-BOT_ID = Config.BOT_ID
-OWNER_ID = Config.OWNER_ID
 
 kaykay = Client("Chatbot", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
