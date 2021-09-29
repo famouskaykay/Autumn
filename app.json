@@ -12,6 +12,10 @@
             "description": "Your API_HASH from my.telegram.org",
             "required": true
         },
+        "LOG_GROUP_ID": {
+            "description": "Your LOG_GROUP_ID ",
+            "required": true
+        },
         "BOT_TOKEN": {
             "description": "Your bot token from @botfather",
             "required": true
