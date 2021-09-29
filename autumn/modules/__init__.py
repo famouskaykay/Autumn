@@ -2,6 +2,7 @@
 import importlib
 import sys
 from os.path import basename, dirname, isfile
+import glob
 
 from autumn import MOD_LOAD, MOD_NOLOAD
 
