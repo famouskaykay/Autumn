@@ -1,6 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
+import asyncio
 from autumn import kaykay as app
 from autumn.kay.decorators.errors import capture_err
 from telegraph import Telegraph
