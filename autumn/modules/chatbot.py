@@ -52,14 +52,14 @@ async def type_and_send(message: Message):
     await message._client.send_chat_action(chat_id, "cancel")
 
 
-
 @autumn.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
+    & ~filters.edited
     & ~filters.via_bot
     & ~filters.forwarded,
-    group=chatbot_group,
+    group=2,
 )
 async def chatbot_talk(_, message: Message):
     if message.chat.id not in active_chats_bot:
