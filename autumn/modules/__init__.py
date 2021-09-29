@@ -40,7 +40,7 @@ def __list_all_modules():
 
 
 print("[INFO]: IMPORTING MODULES")
-importlib.import_module("wbb.modules.__main__")
+importlib.import_module("autumn.modules.__main__")
 ALL_MODULES = sorted(__list_all_modules())
 __all__ = ALL_MODULES + ["ALL_MODULES"]
 
