@@ -1,0 +1,47 @@
+{
+    "name": "Autumn",
+    "description": "simple Autumn chat Bot for Telegram made with python 💞 By kaykay ",
+    "logo": "https://telegra.ph/file/e1be1a6fcb7f0e37c297f.jpg",
+    "keywords": [
+        "pytgcalls",
+        "Telegram Bot",
+        "chatbot"
+    ],
+    "website": "https://t.me/KayAspirerProject",
+    "repository": "https://gitHub.com/famouskaykay/Autumn",
+    "success_url": "https://t.me/KayAspirerProject",
+    "env": {
+        "API_ID": {
+            "description": "Your APP_ID from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from my.telegram.org",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token from @botfather",
+            "required": true
+        },
+        "BOT_ID": {
+            "description": "Your bot id",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "Your id",
+            "required": true
+        },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
