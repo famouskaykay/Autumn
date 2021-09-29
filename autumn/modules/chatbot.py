@@ -131,8 +131,8 @@ async def chatbot_function(client, message):
         response = await lunaQuery(
             test, message.from_user.id if message.from_user else 0
         )
-        response = response.replace("Naoto")
-        response = response.replace("naoto")
+        response = response.replace("autumn")
+        response = response.replace("Autumn")
         pro = response
         if not "en" in lan and not lan == "":
             try:
@@ -214,7 +214,7 @@ async def lol(client, message):
 
 
 @kaykay.on_message(
-    filters.regex("Naoto|naoto")
+    filters.regex("Autumn|autumn")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
