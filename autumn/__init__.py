@@ -1,5 +1,5 @@
 from pyrogram import Client, errors
-from autumn.config import API_ID, API_HASH, TOKEN, BOT_ID, OWNER_ID
+from autumn.config import APP_ID, API_HASH, TOKEN, BOT_ID, OWNER_ID
 import logging
 
 logging.basicConfig(
