@@ -1,14 +1,14 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from autumn import kaykay
+from autumn import kaykay as app
 from autumn.kay.decorators.errors import capture_err
 from telegraph import Telegraph
 
 
 
 
-kevin = kaykay.get_me()
+kevin = app.get_me()
 
 BOT_NAME = kevin.first_name + (kevin.last_name or "")
 BOT_USERNAME = kevin.username
@@ -18,7 +18,7 @@ telegraph = Telegraph()
 telegraph.create_account(short_name=BOT_USERNAME)
 
 
-@kaykay.on_message(filters.command("telegraph"))
+@app.on_message(filters.command("telegraph"))
 @capture_err
 async def paste(_, message: Message):
     reply = message.reply_to_message
