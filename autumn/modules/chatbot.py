@@ -42,7 +42,7 @@ async def fetch(url):
         return
 
 
-kaykay_chats = []
+cb_chats = []
 en_chats = []
 # AI Chat (C) 2020-2021 by @InukaAsith
 
@@ -80,7 +80,7 @@ async def chatbot_function(client, message):
 
         pro = response
         try:
-            await cb.send_chat_action(message.chat.id, "typing")
+            await kaykay.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
