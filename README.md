@@ -4,9 +4,11 @@ chatbot using brainshop.ai and python
 
 # install on linux
 
-  git clone https://github.com/famouskaykay/Autumn
-  cd Autumn
-  pip3 install -r requirements.txt
+   git clone https://github.com/famouskaykay/Autumn
+   
+   cd Autumn
+   
+   pip3 install -r requirements.txt
 
 # And now run the bot
 
