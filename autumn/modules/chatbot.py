@@ -1,6 +1,6 @@
 import asyncio
 import emoji
-
+from autumn import kaykay as autumn
 IBM_WATSON_CRED_URL = "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/bd6b59ba-3134-4dd4-aff2-49a79641ea15"
 IBM_WATSON_CRED_PASSWORD = "UQ1MtTzZhEsMGK094klnfa-7y_4MCpJY1yhd52MXOo3Y"
 url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
@@ -13,7 +13,7 @@ from pyrogram import filters
 from autumn import BOT_ID
 from autumn.utils.arh import arq
 from autumn.utils import admins_only, edit_or_reply
-from autumn import kaykay
+
 
 translator = google_translator()
 
@@ -46,7 +46,7 @@ cb_chats = []
 en_chats = []
 # AI Chat (C) 2020-2021 by @InukaAsith
 
-@kaykay.on_message(
+@autumn.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -80,7 +80,7 @@ async def chatbot_function(client, message):
 
         pro = response
         try:
-            await kaykay.send_chat_action(message.chat.id, "typing")
+            await autumn.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
@@ -140,13 +140,13 @@ async def chatbot_function(client, message):
             except:
                 return
         try:
-            await kaykay.send_chat_action(message.chat.id, "typing")
+            await autumn.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
 
 
-@kaykay.on_message(
+@autumn.on_message(
     filters.text & ~filters.edited & filters.reply & ~filters.bot
 )
 async def lol(client, message):
@@ -207,13 +207,13 @@ async def lol(client, message):
     if not "en" in lan and not lan == "":
         pro = translator.translate(pro, lang_tgt=lan[0])
     try:
-        await kaykay.send_chat_action(message.chat.id, "typing")
+        await autumn.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
 
 
-@kaykay.on_message(
+@autumn.on_message(
     filters.regex("Autumn|autumn")
     & ~filters.bot
     & ~filters.via_bot
@@ -280,7 +280,7 @@ async def chat(client, message):
         except Exception:
             return
     try:
-        await kaykay.send_chat_action(message.chat.id, "typing")
+        await autumn.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
