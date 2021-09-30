@@ -1,4 +1,4 @@
-from autumn import kaykay as autumn
+
 import asyncio
 from pyrogram import filters, Client 
 
@@ -12,6 +12,12 @@ import os
 import re
 
 
+autumn = Client(
+      "autumn",
+      api_id=API_ID,
+      api_hash=API_HASH,
+      bot_token=TOKEN
+)
 
 @autumn.on_message(filters.command(["help", "start"]))
 async def hello(client, message):
