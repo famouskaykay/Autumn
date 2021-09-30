@@ -62,8 +62,6 @@ async def type_and_send(message: Message):
     group=2,
 )
 async def chatbot_talk(_, message: Message):
-    if message.chat.id not in active_chats_bot:
-        return
     if not message.reply_to_message:
         return
     if not message.reply_to_message.from_user:
