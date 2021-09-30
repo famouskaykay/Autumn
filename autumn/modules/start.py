@@ -37,5 +37,3 @@ async def hello(client, message):
     await message.reply_text(f"Hello {message.from_user.mention},", reply_markup=InlineKeyboardMarkup(buttons))
 
     
-
-kevin.run()
