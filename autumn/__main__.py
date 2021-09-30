@@ -1,3 +1,5 @@
+import importlib
+import uvloop
 from autumn import kaykay
 from autumn.modules import *
 from pyrogram import idle, Client
