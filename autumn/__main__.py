@@ -1,4 +1,5 @@
 import importlib
+import asyncio
 import uvloop
 from autumn import kaykay
 from autumn.modules import *
