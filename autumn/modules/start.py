@@ -33,4 +33,4 @@ async def kukiai(client: Client, message: Message):
 
 
 
-
+kevin.run()
