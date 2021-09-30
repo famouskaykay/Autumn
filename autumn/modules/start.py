@@ -13,11 +13,7 @@ import re
 
 buttons = [[InlineKeyboardButton("Github", url="https://github.com/famouskaykay/Autumn"),]]
         
-@kevin.on_message(filters.command(["help", "start"]))
-async def hello(client, message):
-    await message.reply_text(f"Hello {message.from_user.mention},", reply_markup=InlineKeyboardMarkup(buttons))
 
-    
 @kevin.on_message(
     filters.text
     & filters.reply
@@ -25,7 +21,7 @@ async def hello(client, message):
     & ~filters.edited,
     group=2,
 )  
-async def kays(client, message):
+async def kukiai(client: Client, message: Message):
   msg = message.text
   chat_id = message.chat.id
 
@@ -33,9 +29,13 @@ async def kays(client, message):
 
   kay = f"{autumn['reply']}"
       
-  await kevin.send_chat_action(message.chat.id, "typing")
+  await client.send_chat_action(message.chat.id, "typing")
   await message.reply_text(kay)
 
+@kevin.on_message(filters.command(["help", "start"]))
+async def hello(client, message):
+    await message.reply_text(f"Hello {message.from_user.mention},", reply_markup=InlineKeyboardMarkup(buttons))
 
+    
 
 kevin.run()
