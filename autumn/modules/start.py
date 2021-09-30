@@ -32,25 +32,6 @@ async def kukiai(client: Client, message: Message):
   await message.reply_text(moezilla)
 
 
-messageprivate = '''
-Hi, I'm autumn Chat Bot
-'''
-
-messagegroup = '''
-Hi, I'm autumn Chat Bot
-'''
 
 
-@autumn.on_message(filters.command("start"))
-async def start(_, message):
-    self = await autumn.get_me()
-    busername = self.username
-    if message.chat.type != "private":
-        await message.reply_text(messagegroup)
-        return
-    else:
-        buttons = [[InlineKeyboardButton("Github", url="https://github.com/kaykay/Autumn"),
-                    ]]
-        await message.reply_text(messageprivate, reply_markup=InlineKeyboardMarkup(buttons))
-
-autumn.run()
+kuki.run()
