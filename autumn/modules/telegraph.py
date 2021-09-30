@@ -20,8 +20,7 @@ telegraph.create_account(short_name=BOT_USERNAME)
 
 
 @app.on_message(filters.command("telegraph"))
-@capture_err
-async def hello(client, message):
+async def telegraph(client, message):
     reply = message.reply_to_message
 
     if not reply or not reply.text:
