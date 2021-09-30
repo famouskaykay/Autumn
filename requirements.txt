@@ -9,3 +9,5 @@ python-dotenv
 telegraph
 aiogram
 pyromod
+uvloop
+importlib
