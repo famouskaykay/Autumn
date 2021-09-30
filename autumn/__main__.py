@@ -34,7 +34,7 @@ async def start_bot():
     print(
         "+_________________________________________________________________+"
     )
-    print(f"[INFO]: BOT STARTED !"))
+    print(f"[INFO]: BOT STARTED !")
     try:
         print("[INFO]: SENDING ONLINE STATUS")
         await kaykay.send_message(LOG_GROUP_ID, "autumn has started!")
