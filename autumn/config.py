@@ -9,5 +9,3 @@ API_HASH = os.getenv("API_HASH", "eb06d4abeb98ae0f581e")
 TOKEN = os.getenv("BOT_TOKEN")
 BOT_ID = os.getenv("BOT_ID")
 OWNER_ID = os.getenv("OWNER_ID")
-LOG_GROUP_ID = os.getenv(LOG_GROUP_ID)
-
