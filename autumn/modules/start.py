@@ -34,4 +34,3 @@ async def kukiai(client: Client, message: Message):
 
 
 
-kuki.run()
