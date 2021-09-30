@@ -16,7 +16,7 @@ buttons = [[InlineKeyboardButton("Github", url="https://github.com/famouskaykay/
         
 @kevin.on_message(filters.command(["help", "start"]))
 async def hello(client, message):
-    await message.reply_text(messagep, reply_markup=InlineKeyboardMarkup(buttons))
+    await message.reply_text(f"Hello {message.from_user.mention},", reply_markup=InlineKeyboardMarkup(buttons))
 
     
     
