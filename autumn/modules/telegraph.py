@@ -21,7 +21,7 @@ telegraph.create_account(short_name=BOT_USERNAME)
 
 @app.on_message(filters.command("telegraph"))
 @capture_err
-async def paste(_, message: Message):
+async def hello(client, message):
     reply = message.reply_to_message
 
     if not reply or not reply.text:
@@ -37,4 +37,3 @@ async def paste(_, message: Message):
         disable_web_page_preview=True,
     )
 
-app.run()
