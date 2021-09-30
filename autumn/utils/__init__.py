@@ -13,6 +13,10 @@ from pyrogram.types import Chat, Message, User
 from autumn import OWNER_ID
 from autumn import kaykay
 
+
+from .misc import paginate_modules  
+from .read_lines import random_line  
+
 def admins_only(func: Callable) -> Coroutine:
     async def wrapper(client: Client, message: Message):
         if message.from_user.id == OWNER_ID:
