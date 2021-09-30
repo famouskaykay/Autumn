@@ -2,6 +2,7 @@ print("[INFO]: INITIALIZING")
 from pyrogram import Client, errors
 from autumn.config import APP_ID, API_HASH, TOKEN, BOT_ID, OWNER_ID
 import logging
+from telegraph import Telegraph
 import asyncio
 from kaysconfig import LOG_GROUP_ID
 import time
@@ -24,7 +25,8 @@ bot_start_time = time.time()
 
 kaykay = Client("autumn", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 
-
+telegraph = Telegraph()
+telegraph.create_account(short_name=BOT_NAME)
 
 print("[INFO]: STARTING BOT CLIENT ")
 kaykay.start()
