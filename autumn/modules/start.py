@@ -11,7 +11,6 @@ import requests
 import os
 import re
 
-messagep = "Hello {message.from_user.mention}, !"
 buttons = [[InlineKeyboardButton("Github", url="https://github.com/famouskaykay/Autumn"),]]
         
 @kevin.on_message(filters.command(["help", "start"]))
@@ -19,17 +18,23 @@ async def hello(client, message):
     await message.reply_text(f"Hello {message.from_user.mention},", reply_markup=InlineKeyboardMarkup(buttons))
 
     
-    
-async def kukiai(client, message):
+@kevin.on_message(
+    filters.text
+    & filters.reply
+    & ~filters.bot
+    & ~filters.edited,
+    group=2,
+)  
+async def kays(client, message):
   msg = message.text
   chat_id = message.chat.id
 
-  kuki =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
+  autumn =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
 
-  moezilla = f"{kuki['reply']}"
+  kay = f"{autumn['reply']}"
       
-  await kevin.send_chat_action(message.chat.id, "typing")
-  await message.reply_text(moezilla)
+  await client.send_chat_action(message.chat.id, "typing")
+  await message.reply_text(kay)
 
 
 
