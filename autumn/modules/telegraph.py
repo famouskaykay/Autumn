@@ -5,8 +5,8 @@ from pyrogram import Client
 import asyncio
 from autumn import kaykay as app
 from autumn.kay.decorators.errors import capture_err
-from telegraph import Telegraph
 
+from autumn import telegraph
 
 
 
@@ -20,8 +20,11 @@ telegraph = Telegraph()
 telegraph.create_account(short_name=BOT_USERNAME)
 
 
+
+
 @app.on_message(filters.command("telegraph"))
-async def telegraph(client, message):
+@capture_err
+async def paste(_, message: Message):
     reply = message.reply_to_message
 
     if not reply or not reply.text:
@@ -36,4 +39,3 @@ async def telegraph(client, message):
         f"**Posted:** {page['url']}",
         disable_web_page_preview=True,
     )
-
