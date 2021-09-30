@@ -52,4 +52,4 @@ async def start(_, message):
                     ]]
         await message.reply_text(messageprivate, reply_markup=InlineKeyboardMarkup(buttons))
 
-
+autumn.run()
