@@ -26,6 +26,5 @@ kaykay = Client("autumn", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 
 
-print("[INFO]: STARTING BOT CLIENT TEMPORARILY")
+print("[INFO]: STARTING BOT CLIENT ")
 kaykay.start()
-kaykay.stop()
