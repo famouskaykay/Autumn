@@ -6,7 +6,7 @@ from pyrogram import idle, Client
 import time
 from autumn.modules import ALL_MODULES
 
-
+loop = asyncio.get_event_loop()
 
 print("[INFO]: INITIALIZING ")
 
