@@ -8,9 +8,6 @@ from autumn.modules import ALL_MODULES
 
 print("[INFO]: INITIALIZING ")
 
-kaykay.start()
-print("[INFO]: Autumn started ")
-idle()
 
 
 
