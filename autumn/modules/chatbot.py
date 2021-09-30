@@ -28,15 +28,6 @@ en_chats = []
 
 
 # AI Chat 
-#switch to enable or disable chatbot
-
-
-@autumn.on_message(filters.command("chatbot") & ~filters.edited)
-async def chatbot_status(_, message: Message):
-    if len(message.command) != 2:
-        return await eor(message, text="**Usage:**\n/chatbot [ENABLE|DISABLE]")
-    await chat_bot_toggle(active_chats_bot, message)
- 
 
 async def lunaQuery(query: str, user_id: int):
     luna = await arq.luna(query, user_id)
