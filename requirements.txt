@@ -7,3 +7,4 @@ emoji
 tgcrypto
 python-dotenv
 telegraph
+aiogram
