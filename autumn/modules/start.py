@@ -20,7 +20,7 @@ async def hello(client, message):
 
     
     
-async def kukiai(client: Client, message: Message):
+async def kukiai(client, message):
   msg = message.text
   chat_id = message.chat.id
 
