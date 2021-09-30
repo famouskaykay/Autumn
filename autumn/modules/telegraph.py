@@ -1,5 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import Message
+from pyrogram import Client 
 
 import asyncio
 from autumn import kaykay as app
