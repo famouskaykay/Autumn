@@ -28,7 +28,7 @@ async def kukiai(client, message):
 
   moezilla = f"{kuki['reply']}"
       
-  await client.send_chat_action(message.chat.id, "typing")
+  await kevin.send_chat_action(message.chat.id, "typing")
   await message.reply_text(moezilla)
 
 
