@@ -37,4 +37,4 @@ async def paste(_, message: Message):
         disable_web_page_preview=True,
     )
 
-
+app.run()
