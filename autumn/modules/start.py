@@ -1,4 +1,4 @@
-from autumn.config import APP_ID, API_HASH, TOKEN
+from autumn import kaykay as kevin
 import asyncio
 from pyrogram import filters, Client 
 
@@ -11,31 +11,25 @@ import requests
 import os
 import re
 
-Client("autumn", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
-
-autumn = Client(
-      "autumn",
-      api_id=APP_ID,
-      api_hash=API_HASH,
-      bot_token=TOKEN
-)
-
-@autumn.on_message(filters.command(["help", "start"]))
+messagep = f"Hello {message.from_user.mention}, !"
+buttons = [[InlineKeyboardButton("Github", url="https://github.com/famouskaykay/Autumn"),]]
+        
+@kevin.on_message(filters.command(["help", "start"]))
 async def hello(client, message):
-    await message.reply_text(f"Hello {message.from_user.mention}  !")
+    await message.reply_text(messagep, reply_markup=InlineKeyboardMarkup(buttons))
 
     
     
-async def autumnai(client: Client, message: Message):
+async def kukiai(client: Client, message: Message):
   msg = message.text
   chat_id = message.chat.id
 
-  autumn =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
+  kuki =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
 
-  kaykay = f"{autumn['reply']}"
+  moezilla = f"{kuki['reply']}"
       
   await client.send_chat_action(message.chat.id, "typing")
-  await message.reply_text(kaykay)
+  await message.reply_text(moezilla)
 
 
 messageprivate = '''
