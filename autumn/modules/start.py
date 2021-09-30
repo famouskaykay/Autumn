@@ -11,10 +11,11 @@ import requests
 import os
 import re
 
+Client("autumn", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 autumn = Client(
       "autumn",
-      api_id=API_ID,
+      api_id=APP_ID,
       api_hash=API_HASH,
       bot_token=TOKEN
 )
