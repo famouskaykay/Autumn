@@ -14,7 +14,7 @@ LOG_GROUP_ID = LOG_GROUP_ID
 
 MOD_LOAD = []
 MOD_NOLOAD = []
-bot_start_time = time.time()
+kaykay_start_time = time.time()
 
 
 kaykay = Client("Chatbot", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
