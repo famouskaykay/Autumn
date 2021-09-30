@@ -11,7 +11,7 @@ import requests
 import os
 import re
 
-messagep = f"Hello {message.from_user.mention}, !"
+messagep = "Hello {message.from_user.mention}, !"
 buttons = [[InlineKeyboardButton("Github", url="https://github.com/famouskaykay/Autumn"),]]
         
 @kevin.on_message(filters.command(["help", "start"]))
