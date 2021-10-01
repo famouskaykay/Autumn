@@ -1,4 +1,4 @@
-from autumn import kaykay as kevin
+from autumn import kaykay 
 import asyncio
 from pyrogram import filters, Client 
 
@@ -14,25 +14,27 @@ import re
 buttons = [[InlineKeyboardButton("Github", url="https://github.com/famouskaykay/Autumn"),]]
         
 
-@kevin.on_message(
+@kaykay.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
     & ~filters.edited,
     group=2,
-)  
-async def kukiai(client, message):
-  msg = message.text
-  chat_id = message.chat.id
+)
+async def kukiai(client: Client, message: Message):
+    msg = message.text
+    chat_id = message.chat.id
 
-  autumn =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
+    Kuki =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
 
-  kay = f"{autumn['reply']}"
+    moezilla = f"{Kuki['reply']}"
       
-  await client.send_chat_action(message.chat.id, "typing")
-  await message.reply_text(kay)
-
-@kevin.on_message(filters.command(["help", "start"]))
+    await client.send_chat_action(message.chat.id, "typing")
+    await message.reply_text(moezilla)
+ 
+  
+    
+@kaykay.on_message(filters.command(["help", "start"]))
 async def hello(client, message):
     await message.reply_text(f"Hello {message.from_user.mention},", reply_markup=InlineKeyboardMarkup(buttons))
 
