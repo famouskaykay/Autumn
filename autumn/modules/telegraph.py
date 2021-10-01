@@ -6,7 +6,7 @@ import asyncio
 from autumn import kaykay as app
 from autumn.kay.decorators.errors import capture_err
 
-from autumn import telegraph
+from modules import telegraph
 
 
 
