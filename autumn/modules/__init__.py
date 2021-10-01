@@ -3,8 +3,16 @@ import importlib
 import sys
 from os.path import basename, dirname, isfile
 import glob
+from telegraph import Telegraph
 
 from autumn import MOD_LOAD, MOD_NOLOAD
+kevin = kaykay.get_me()
+
+BOT_NAME = kevin.first_name
+
+
+telegraph = Telegraph()
+telegraph.create_account(short_name=BOT_NAME)
 
 
 def __list_all_modules():
