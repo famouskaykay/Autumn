@@ -5,7 +5,10 @@ import uvloop
 from autumn import kaykay
 from pyrogram import idle, Client
 import time
+
+from autumn.modules import *
 from autumn.modules import ALL_MODULES
+
 
 loop = asyncio.get_event_loop()
 
