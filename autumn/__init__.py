@@ -27,14 +27,14 @@ MOD_NOLOAD = []
 bot_start_time = time.time()
 
 
-
+kevin = kaykay.get_me()
 
 print("[INFO]: GATHERING PROFILE INFO")
 BOT_NAME = kevin.first_name + (kevin.last_name or "")
 BOT_USERNAME = kevin.username
 BOT_MENTION = kevin.mention
 
-kevin = kaykay.get_me()
+
 
 telegraph = Telegraph()
 telegraph.create_account(short_name=BOT_NAME)
