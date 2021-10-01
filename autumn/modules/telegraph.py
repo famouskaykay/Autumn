@@ -16,7 +16,7 @@ BOT_USERNAME = kevin.username
 BOT_MENTION = kevin.mention
 
 telegraph.create_account(short_name=BOT_USERNAME)
-
+telegraph = telegraph()
 
 
 
