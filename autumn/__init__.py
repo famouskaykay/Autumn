@@ -38,4 +38,3 @@ BOT_MENTION = kevin.mention
 telegraph = Telegraph()
 telegraph.create_account(short_name=BOT_NAME)
 
-DB_URI = os.environ.get('DATABASE_URL')
