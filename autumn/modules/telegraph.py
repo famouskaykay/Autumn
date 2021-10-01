@@ -13,26 +13,10 @@ from autumn import telegraph
 
 
 
-@app.on_message(filters.command("telegraph"))
-@capture_err
-async def paste(_, message: Message):
-    reply = message.reply_to_message
-
-    if not reply or not reply.text:
-        return await message.reply("Reply to a text message")
-
-    if len(message.command) < 2:
-        return await message.reply("**Usage:**\n /telegraph [Page name]")
-
-    page_name = message.text.split(None, 1)[1]
-    page = telegraph.create_page(page_name, html_content=reply.text.html)
-    return await message.reply(
-        f"**Posted:** {page['url']}",
-        disable_web_page_preview=True,
-    )
 
 
 @app.on_message(filters.photo)
+@capture_err
 async def telegraphphoto(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -49,6 +33,7 @@ async def telegraphphoto(client, message):
         os.remove(download_location)
 
 @app.on_message(filters.video)
+@capture_err
 async def telegraphvid(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
