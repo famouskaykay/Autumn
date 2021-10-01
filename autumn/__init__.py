@@ -8,6 +8,7 @@ import time
 from os import path
 from aiogram import Bot, Dispatcher, types
 from pyromod import listen
+import os
 
 from telegraph import Telegraph
 
@@ -34,8 +35,7 @@ BOT_NAME = kevin.first_name + (kevin.last_name or "")
 BOT_USERNAME = kevin.username
 BOT_MENTION = kevin.mention
 
-
-
 telegraph = Telegraph()
 telegraph.create_account(short_name=BOT_NAME)
 
+DB_URI = os.environ.get('DATABASE_URL')
