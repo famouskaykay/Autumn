@@ -3,6 +3,7 @@
     "description": " another noob bot",
     "logo": "https://telegra.ph/file/a54ed27b0dc3fc3e439fd.jpg",
     "repository": "https://github.com/famouskaykay/Autumn",
+    "stack": "container",
     "env": {
         "API_ID": {
             "description": "Your APP_ID from my.telegram.org",
@@ -32,10 +33,8 @@
             "description": "Your id",
             "required": true
         }
-    },
-    "addons": [
-        {
-            "plan": "heroku-postgresql"
-        }
-    ]
+    }
 }
+
+
+ 
