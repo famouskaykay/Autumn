@@ -5,18 +5,11 @@ from pyrogram import Client
 import asyncio
 from autumn import kaykay as app
 from autumn.kay.decorators.errors import capture_err
-from telegraph import Telegraph as telegraph
+from autumn import telegraph
 
 
 
-kevin = app.get_me()
 
-BOT_NAME = kevin.first_name + (kevin.last_name or "")
-BOT_USERNAME = kevin.username
-BOT_MENTION = kevin.mention
-
-telegraph.create_account(short_name=BOT_USERNAME)
-telegraph = telegraph()
 
 
 
