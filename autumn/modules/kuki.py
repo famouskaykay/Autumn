@@ -25,17 +25,16 @@ async def kukiai(client: Client, message: Message):
   msg = message.text
   chat_id = message.chat.id
 
-  if message.text and not message.document:
-        if not kuki_message(context, message):
-            return
-        Message = message.text
-        kuki.send_chat_action(chat_id, action="typing")
-        kukiurl = requests.get('https://kuki-api.tk/api/Raiden/moezilla/message='+Message)
-        Kuki = json.loads(kukiurl.text)
-        kuki = Kuki['reply']
-        sleep(0.3)
-        message.reply_text(kuki, timeout=60)
-    
+  Kuki =   requests.get(f"https://kuki-api.tk/api/botname/ownername/message={msg}").json()
+
+  Kuki =   requests.get(f"https://kuki-api.tk/api/message={msg}").json()
+
+  ikay = f"{Kuki['reply']}"
+      
+  await client.send_chat_action(message.chat.id, "typing")
+  await message.reply_text(ikay)
+
+  
 @kaykay.on_message(filters.command(["help", "start"]))
 async def hello(client, message):
   
