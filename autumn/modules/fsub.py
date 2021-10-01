@@ -1,6 +1,6 @@
 import time
 import logging
-import Config
+from autumn import config
 from pyrogram import Client, filters
 from sql import forceSubscribe_sql as sql
 from pyrogram.types import ChatPermissions, InlineKeyboardMarkup, InlineKeyboardButton
