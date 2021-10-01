@@ -3,7 +3,6 @@ from kaysconfig import LOG_GROUP_ID
 import asyncio
 import uvloop
 from autumn import kaykay
-from autumn.modules import *
 from pyrogram import idle, Client
 import time
 from autumn.modules import ALL_MODULES
