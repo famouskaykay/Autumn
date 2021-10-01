@@ -15,7 +15,6 @@ logging.basicConfig(
 )
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-kaykay = Client("autumn", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 
 LOG_GROUP_ID = LOG_GROUP_ID
@@ -24,13 +23,7 @@ MOD_LOAD = []
 MOD_NOLOAD = []
 bot_start_time = time.time()
 
-kevin = kaykay.get_me()
-
-BOT_NAME = kevin.first_name
-
-
-telegraph = Telegraph()
-telegraph.create_account(short_name=BOT_NAME)
+kaykay = Client("autumn", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 print("[INFO]: STARTING BOT CLIENT ")
 kaykay.start()
