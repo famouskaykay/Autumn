@@ -10,3 +10,4 @@ telegraph
 aiogram
 pyromod
 uvloop
+sqlalchemy
