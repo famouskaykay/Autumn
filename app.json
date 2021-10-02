@@ -17,8 +17,8 @@
             "description": "Your LOG_GROUP_ID ",
             "required": true
         },
-        "DATABASE_URL": {
-            "description": "Your DATABASE_URL ",
+        "MONGO_URL": {
+            "description": "Your MONGO_URL",
             "required": true
         },
         "BOT_TOKEN": {
