@@ -1,4 +1,4 @@
-FROM Autumn/python:latest
+FROM autumn/python:latest
 
 WORKDIR /autumn
 RUN chmod 777 /autumn
