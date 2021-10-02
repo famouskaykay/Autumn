@@ -1,7 +1,11 @@
-FROM autumn/python:latest
+FROM python:latest
 
 WORKDIR /autumn
 RUN chmod 777 /autumn
+RUN apt-get update -y
+RUN apt-get install -y wget curl bash git neofetch sudo software-properties-common ffmpeg
+
+
 
 # Installing Requirements
 RUN pip3 install -U pip
