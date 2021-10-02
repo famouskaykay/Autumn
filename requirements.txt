@@ -11,3 +11,4 @@ aiogram
 pyromod
 uvloop
 sqlalchemy
+ffmpeg-python
