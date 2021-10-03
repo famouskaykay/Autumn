@@ -58,4 +58,4 @@ def callbackquery(**args):
         telethn.add_event_handler(func, events.CallbackQuery(**args))
         return func
 
-    return 
+    return decorator
