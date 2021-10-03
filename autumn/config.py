@@ -34,7 +34,7 @@ class Config(object):
     INFOPIC = True
     URL = None
     SPAMWATCH_API = "A0KyN81ZlB_kSTrCtRmlIhc_7OluBe3fBjMeaSsTXP35xeQQZLw5UThLtJ~rY5Un"  # go to support.spamwat.ch to get key
-    SPAMWATCH_SUPPORT_CHAT = "@KayAspirerProject"
+    SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
